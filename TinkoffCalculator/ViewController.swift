@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func buttonPressed(_ sender: UIButton) {
-        guard let buttonTitle = sender.titleLabel?.text else {return}
+        guard let buttonTitle = sender.currentTitle else {return}
         print(buttonTitle)
     }
     
