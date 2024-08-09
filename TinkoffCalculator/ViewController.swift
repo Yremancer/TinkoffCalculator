@@ -37,7 +37,7 @@ enum CalculationHistoryItem {
 }
 
 
-
+var preCalculate: String?
 
 class ViewController: UIViewController {
 
@@ -88,13 +88,29 @@ class ViewController: UIViewController {
             else {return}
         calculationHistory.append(.number(labelNumber))
         
-        let result = calculate()
+        do {
+            let result = try calculate()
         
-        label.text = numberFormatter.string(from: NSNumber(value: result))
+            label.text = numberFormatter.string(from: NSNumber(value: result))
+            preCalculate = label.text!
+        }catch{
+            label.text = "Ошибка"
+        }
         calculationHistory.removeAll()
+        
     }
     
     
+    
+    @IBAction func unwindAction(unwindSegue: UIStoryboardSegue){
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == "CALCULATIONS_LIST",
+              let calculationsListVC = segue.destination as? CalculationListViewController else {return}
+        calculationsListVC.result = preCalculate
+    }
     
     
     @IBOutlet weak var label: UILabel!
@@ -113,7 +129,6 @@ class ViewController: UIViewController {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         resetLabelText()
@@ -123,7 +138,23 @@ class ViewController: UIViewController {
         label.text = "0"
     }
     
-    func calculate() -> Double{
+    
+    
+    
+    @IBAction func showCalculationsList(_ sender: Any) {
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        
+        let calculationsListVC = sb.instantiateViewController(identifier: "CalculationsListViewController")
+        show(calculationsListVC, sender: self)
+        
+        if let vc = calculationsListVC as? CalculationListViewController{
+            vc.result = label.text
+        }
+    }
+    
+    
+    func calculate() throws -> Double{
         guard case .number(let firstNumber) = calculationHistory[0] else {return 0}
         
         var currentValue = firstNumber

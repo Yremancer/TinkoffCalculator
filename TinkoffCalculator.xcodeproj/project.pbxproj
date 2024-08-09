@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1CAB6B2C645B3D003220A5 /* CalculationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1CAB6A2C645B3D003220A5 /* CalculationListViewController.swift */; };
 		3C4D90FE2C6359A500A26854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D90FD2C6359A500A26854 /* AppDelegate.swift */; };
 		3C4D91002C6359A500A26854 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D90FF2C6359A500A26854 /* SceneDelegate.swift */; };
 		3C4D91022C6359A500A26854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4D91012C6359A500A26854 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C1CAB6A2C645B3D003220A5 /* CalculationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationListViewController.swift; sourceTree = "<group>"; };
 		3C4D90FA2C6359A500A26854 /* TinkoffCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TinkoffCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C4D90FD2C6359A500A26854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C4D90FF2C6359A500A26854 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3C4D90FD2C6359A500A26854 /* AppDelegate.swift */,
 				3C4D90FF2C6359A500A26854 /* SceneDelegate.swift */,
 				3C4D91012C6359A500A26854 /* ViewController.swift */,
+				3C1CAB6A2C645B3D003220A5 /* CalculationListViewController.swift */,
 				3C4D91032C6359A500A26854 /* Main.storyboard */,
 				3C4D91062C6359A600A26854 /* Assets.xcassets */,
 				3C4D91082C6359A600A26854 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1CAB6B2C645B3D003220A5 /* CalculationListViewController.swift in Sources */,
 				3C4D91022C6359A500A26854 /* ViewController.swift in Sources */,
 				3C4D90FE2C6359A500A26854 /* AppDelegate.swift in Sources */,
 				3C4D91002C6359A500A26854 /* SceneDelegate.swift in Sources */,
